@@ -41,7 +41,7 @@ function fechar_pedido() {
 
     //função que obtem preços e tamanha dos pedidos
 
-    let ped = document.querySelectorAll('.selecionado');
+    //let ped = document.querySelectorAll('.selecionado');
     let preco = pegarPreco();
     let tam = pegarTamanho();
     let link = gerar_link(preco, tam);
@@ -64,7 +64,7 @@ function gerar_link(preco, tam) {
     let endereco = prompt("Qual o seu endereço?");
 
 
-    texto = `${encodeURIComponent(texto)}%0A${encodeURIComponent(prato)}%0A${encodeURIComponent(bebida)}%0A${encodeURIComponent(sobre)}%0A${encodeURIComponent("TOTAL: R$" + total)}%0A%0A${encodeURIComponent("nome:" + nome)}%0A${encodeURIComponent("Endereço:" + endereco)}`;
+    texto = `${encodeURIComponent(texto)}%0A${encodeURIComponent(prato)}%0A${encodeURIComponent(bebida)}%0A${encodeURIComponent(sobre)}%0A%0A${encodeURIComponent("TOTAL: R$" + total)}%0A%0A${encodeURIComponent("nome:" + nome)}%0A${encodeURIComponent("Endereço:" + endereco)}`;
 
     let link = `https://wa.me/55015981353028?text=${texto}`;
 
