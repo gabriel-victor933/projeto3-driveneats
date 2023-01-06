@@ -115,7 +115,9 @@ function pegarTamanho() {
 
 
 function abrir_pagina(link) {
+
     var win = window.open(link, '_blank');
     win.focus();
+
 }
 
