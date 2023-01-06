@@ -135,7 +135,7 @@ main p {
     color: #a6a6a6;
 }
 
-main span {
+main>span {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -238,10 +238,9 @@ main>div {
     top: 0px;
     right: 0px;
     z-index: 2;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    display: none;
 
 
 }
@@ -274,18 +273,15 @@ main>div {
     margin-bottom: 5px;
 }
 
-.confirmar>div p:first-child {
-    justify-content: center;
-    font-family: 'Roboto';
-    font-style: normal;
+.confirmar>div p:first-child,
+.confirmar>div p:nth-child(5) {
     font-weight: 700;
-    font-size: 22px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-
 
 }
 
+.confirmar>div p:first-child {
+    justify-content: center;
+}
 
 .confirmar .btn_pedir {
     width: 329px;

@@ -34,23 +34,23 @@
                 <div class="item" onclick="selecionar('#f1')" id="f1">
                     <div class="img"></div>
                     <h3>Frango Yin Yang</h3>
-                    <p>Um pouco de batata, um pouco de salada</p>
-                    <span>R$ 14,90</span>
+                    <p name="tam">Porção pequena</p>
+                    <span>R$ <span name="preco">12.90</span></span>
                     <ion-icon name="checkmark-circle-sharp"></ion-icon>
                 </div>
                 <div class="item" onclick="selecionar('#f2')" id="f2">
                     <div class="img"></div>
-                    <h3>Frango Yin</h3>
-                    <p>Um pouco de batata, um pouco de salada</p>
-                    <span>R$ 15,90</span>
+                    <h3>Frango Yin yang</h3>
+                    <p name="tam">Porção média</p>
+                    <span>R$ <span name="preco">15.90</span></span>
                     <ion-icon name="checkmark-circle-sharp"></ion-icon>
 
                 </div>
                 <div class="item" onclick="selecionar('#f3')" id="f3">
                     <div class="img"></div>
-                    <h3>Frango Yang</h3>
-                    <p>Um pouco de batata, um pouco de salada</p>
-                    <span>R$ 18,90</span>
+                    <h3>Frango Yin Yang</h3>
+                    <p name="tam">Porção Grande</p>
+                    <span>R$ <span name="preco">18.90</span></span>
                     <ion-icon name="checkmark-circle-sharp"></ion-icon>
 
                 </div>
@@ -64,24 +64,24 @@
                 <div class="item" onclick="selecionar('#b1')" id="b1">
                     <div class="img"></div>
                     <h3>Coquinha gelada</h3>
-                    <p>Lata 350ml</p>
-                    <span>R$ 5,00</span>
+                    <p name="tam">Lata 350ml</p>
+                    <span>R$ <span name="preco">5.00</span></span>
                     <ion-icon name="checkmark-circle-sharp"></ion-icon>
 
                 </div>
                 <div class="item" onclick="selecionar('#b2')" id="b2">
                     <div class="img"></div>
                     <h3>Coquinha gelada</h3>
-                    <p>garrafa 600ml</p>
-                    <span>R$ 7,00</span>
+                    <p name="tam">garrafa 600ml</p>
+                    <span>R$ <span name="preco">7.00</span></span>
                     <ion-icon name="checkmark-circle-sharp"></ion-icon>
 
                 </div>
                 <div class="item" onclick="selecionar('#b3')" id="b3">
                     <div class="img"></div>
                     <h3>Coquinha gelada</h3>
-                    <p>garrafa 2l</p>
-                    <span>R$ 11,90</span>
+                    <p name="tam">garrafa 2l</p>
+                    <span>R$ <span name="preco">11.90</span></span>
                     <ion-icon name="checkmark-circle-sharp"></ion-icon>
 
                 </div>
@@ -94,24 +94,24 @@
                 <div class="item" onclick="selecionar('#s1')" id="s1">
                     <div class="img"></div>
                     <h3>Pudim</h3>
-                    <p>1 pedaço</p>
-                    <span>R$ 4,00</span>
+                    <p name="tam">1 pedaço</p>
+                    <span>R$<span name="preco">4.00</span> </span>
                     <ion-icon name="checkmark-circle-sharp"></ion-icon>
 
                 </div>
                 <div class="item" onclick="selecionar('#s2')" id="s2">
                     <div class="img"></div>
                     <h3>Pudim</h3>
-                    <p>2 pedaços</p>
-                    <span>R$ 8,00</span>
+                    <p name="tam">2 pedaços</p>
+                    <span>R$ <span name="preco">8.00</span></span>
                     <ion-icon name="checkmark-circle-sharp"></ion-icon>
 
                 </div>
                 <div class="item" onclick="selecionar('#s3')" id="s3">
                     <div class="img"></div>
                     <h3>Pudim</h3>
-                    <p>3 pedaços</p>
-                    <span>R$ 10,00</span>
+                    <p name="tam">3 pedaços</p>
+                    <span>R$ <span name="preco">10.00</span></span>
                     <ion-icon name="checkmark-circle-sharp"></ion-icon>
 
                 </div>
@@ -121,20 +121,20 @@
     </main>
 
     <footer>
-        <button id="fechar" onclick="fechar_pedido()" disabled>
+        <button id="fechar" onclick="confirmar()" disabled>
             <p>Selecione os 3 itens para fechar o pedido</p>
         </button>
     </footer>
 
     <div class="confirmar">
         <div>
-            <p><span>Confirme seu pedido</span></p>
-            <p><span>Frango yin</span><span>14,90</span></p>
-            <p><span>Coquinha gelada</span><span>4,90</span></p>
-            <p><span>Pudim</span><span>7,90</span></p>
-            <p><span>TOTAL</span> <span>27,70</span></p>
-            <button class="btn_pedir">Tudo verto, pode pedir!</button>
-            <button class="btn_cancelar">Cancelar!</button>
+            <p>Confirme seu pedido</p>
+            <p><span>Frango yin</span><span id="precos">14,90</span></p>
+            <p><span>Coquinha gelada</span><span id="precos">4,90</span></p>
+            <p><span>Pudim</span><span id="precos">7,90</span></p>
+            <p><span>TOTAL: </span> <span id="precos">27,70</span></p>
+            <button class="btn_pedir" onclick="fechar_pedido()">Tudo verto, pode pedir!</button>
+            <button class="btn_cancelar" onclick="cancelar()">Cancelar!</button>
         </div>
     </div>
 
